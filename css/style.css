@@ -1,0 +1,203 @@
+@keyframes floatRight {
+  from {
+    left: -10%; }
+
+  to {
+    left: 100%; } }
+@-webkit-keyframes floatRight {
+  from {
+    left: -10%; }
+
+  to {
+    left: 100%; } }
+@keyframes floatDown {
+  from {
+    top: -10%; }
+
+  to {
+    top: 100%; } }
+@-webkit-keyframes floatDown {
+  from {
+    top: -10%; }
+
+  to {
+    top: 100%; } }
+@keyframes bgRotate {
+  from {
+    transform: rotate(0deg); }
+
+  to {
+    transform: rotate(360deg); } }
+@-webkit-keyframes bgRotate {
+  from {
+    -webkit-transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg); } }
+@keyframes shakeAndPulseAndRotate {
+  0% {
+    transform: scale(1) rotate(0deg); }
+
+  25% {
+    transform: scale(0.75) rotate(25deg); }
+
+  50% {
+    transform: scale(1) rotate(0deg); }
+
+  75% {
+    transform: scale(0.75) rotate(-25deg); }
+
+  100% {
+    transform: scale(1) rotate(0deg); } }
+@-webkit-keyframes shakeAndPulseAndRotate {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg); }
+
+  25% {
+    -webkit-transform: scale(0.75) rotate(25deg); }
+
+  50% {
+    -webkit-transform: scale(1) rotate(0deg); }
+
+  75% {
+    -webkit-transform: scale(0.75) rotate(-25deg); }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0deg); } }
+@keyframes shakeAndPulse {
+  0% {
+    transform: scale(1) rotate(0deg); }
+
+  25% {
+    transform: scale(0.75) rotate(5deg); }
+
+  50% {
+    transform: scale(1) rotate(0deg); }
+
+  75% {
+    transform: scale(0.75) rotate(-5deg); }
+
+  100% {
+    transform: scale(1) rotate(0deg); } }
+@-webkit-keyframes shakeAndPulse {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg); }
+
+  25% {
+    -webkit-transform: scale(0.75) rotate(5deg); }
+
+  50% {
+    -webkit-transform: scale(1) rotate(0deg); }
+
+  75% {
+    -webkit-transform: scale(0.75) rotate(-5deg); }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0deg); } }
+@keyframes shake {
+  0% {
+    transform: rotate(0deg); }
+
+  25% {
+    transform: rotate(5deg); }
+
+  50% {
+    transform: rotate(0deg); }
+
+  75% {
+    transform: rotate(-5deg); }
+
+  100% {
+    transform: rotate(0deg); } }
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  25% {
+    -webkit-transform: rotate(5deg); }
+
+  50% {
+    -webkit-transform: rotate(0deg); }
+
+  75% {
+    -webkit-transform: rotate(-5deg); }
+
+  100% {
+    -webkit-transform: rotate(0deg); } }
+@keyframes zoomAndDisappear {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+
+  100% {
+    transform: scale(3);
+    opacity: 0; } }
+@-webkit-keyframes zoomAndDisappear {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: scale(3);
+    opacity: 0; } }
+@keyframes catInvasionPhaseTwo {
+  0% {
+    height: 1%; }
+
+  100% {
+    height: 100%; } }
+@-webkit-keyframes catInvasionPhaseTwo {
+  0% {
+    height: 1%; }
+
+  100% {
+    height: 100%; } }
+body {
+  animation: bgRotate 5s infinite;
+  /*-webkit-animation: bgRotate 5s infinite;*/
+  background-image: url("../img/bg1.gif");
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin: 0; }
+
+.crazy-bar {
+  background-color: #00FF00;
+  background-image: url("../img/mastercat1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 3px 4px 5px #EB00FF;
+  height: 1%;
+  position: fixed;
+  top: 0;
+  width: 0%;
+  -webkit-transition: width 0.25s; }
+  .crazy-bar.catInvasionPhaseTwo {
+    -webkit-animation: catInvasionPhaseTwo 2s linear forwards;
+    animation: catInvasionPhaseTwo 2s linear forwards; }
+  .crazy-bar .message {
+    display: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 48px;
+    text-align: center;
+    width: 100%; }
+
+.cat {
+  /*background-color: pink;*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(5px 5px 5px #222222);
+  filter: drop-shadow(5px 5px 5px #222222);
+  height: 100px;
+  left: -100px;
+  position: absolute;
+  width: 100px;
+  -webkit-transition: top 2s, right 2s, bottom 2s, left 2s; }
+
+#myCanvas {
+  background-color: #efefef;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 10%; }
+
+/*# sourceMappingURL=style.css.map */
