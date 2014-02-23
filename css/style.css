@@ -24,122 +24,122 @@
     top: 100%; } }
 @keyframes bgRotate {
   from {
-    transform: rotate(0deg); }
+    transform: rotate(0); }
 
   to {
-    transform: rotate(360deg); } }
+    transform: rotate(360); } }
 @-webkit-keyframes bgRotate {
   from {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0); }
 
   to {
-    -webkit-transform: rotate(360deg); } }
+    -webkit-transform: rotate(360); } }
 @keyframes shakeAndPulseAndRotate {
   0% {
-    transform: scale(1) rotate(0deg); }
+    transform: scale(1) rotate(0); }
 
   25% {
     transform: scale(0.75) rotate(25deg); }
 
   50% {
-    transform: scale(1) rotate(0deg); }
+    transform: scale(1) rotate(0); }
 
   75% {
     transform: scale(0.75) rotate(-25deg); }
 
   100% {
-    transform: scale(1) rotate(0deg); } }
+    transform: scale(1) rotate(0); } }
 @-webkit-keyframes shakeAndPulseAndRotate {
   0% {
-    -webkit-transform: scale(1) rotate(0deg); }
+    -webkit-transform: scale(1) rotate(0); }
 
   25% {
     -webkit-transform: scale(0.75) rotate(25deg); }
 
   50% {
-    -webkit-transform: scale(1) rotate(0deg); }
+    -webkit-transform: scale(1) rotate(0); }
 
   75% {
     -webkit-transform: scale(0.75) rotate(-25deg); }
 
   100% {
-    -webkit-transform: scale(1) rotate(0deg); } }
+    -webkit-transform: scale(1) rotate(0); } }
 @keyframes shakeAndPulse {
   0% {
-    transform: scale(1) rotate(0deg); }
+    transform: scale(1) rotate(0); }
 
   25% {
     transform: scale(0.75) rotate(5deg); }
 
   50% {
-    transform: scale(1) rotate(0deg); }
+    transform: scale(1) rotate(0); }
 
   75% {
     transform: scale(0.75) rotate(-5deg); }
 
   100% {
-    transform: scale(1) rotate(0deg); } }
+    transform: scale(1) rotate(0); } }
 @-webkit-keyframes shakeAndPulse {
   0% {
-    -webkit-transform: scale(1) rotate(0deg); }
+    -webkit-transform: scale(1) rotate(0); }
 
   25% {
     -webkit-transform: scale(0.75) rotate(5deg); }
 
   50% {
-    -webkit-transform: scale(1) rotate(0deg); }
+    -webkit-transform: scale(1) rotate(0); }
 
   75% {
     -webkit-transform: scale(0.75) rotate(-5deg); }
 
   100% {
-    -webkit-transform: scale(1) rotate(0deg); } }
+    -webkit-transform: scale(1) rotate(0); } }
 @keyframes shake {
   0% {
-    transform: rotate(0deg); }
+    transform: rotate(0); }
 
   25% {
     transform: rotate(5deg); }
 
   50% {
-    transform: rotate(0deg); }
+    transform: rotate(0); }
 
   75% {
     transform: rotate(-5deg); }
 
   100% {
-    transform: rotate(0deg); } }
+    transform: rotate(0); } }
 @-webkit-keyframes shake {
   0% {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0); }
 
   25% {
     -webkit-transform: rotate(5deg); }
 
   50% {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0); }
 
   75% {
     -webkit-transform: rotate(-5deg); }
 
   100% {
-    -webkit-transform: rotate(0deg); } }
+    -webkit-transform: rotate(0); } }
 @keyframes zoomAndDisappear {
   0% {
-    transform: scale(1);
-    opacity: 1; }
+    opacity: 1;
+    transform: scale(1); }
 
   100% {
-    transform: scale(3);
-    opacity: 0; } }
+    opacity: 0;
+    transform: scale(3); } }
 @-webkit-keyframes zoomAndDisappear {
   0% {
-    -webkit-transform: scale(1);
-    opacity: 1; }
+    opacity: 1;
+    -webkit-transform: scale(1); }
 
   100% {
-    -webkit-transform: scale(3);
-    opacity: 0; } }
+    opacity: 0;
+    -webkit-transform: scale(3); } }
 @keyframes catInvasionPhaseTwo {
   0% {
     height: 1%; }
@@ -154,24 +154,23 @@
     height: 100%; } }
 body {
   animation: bgRotate 5s infinite;
-  /*-webkit-animation: bgRotate 5s infinite;*/
   background-image: url("../img/bg1.gif");
   -webkit-background-size: cover;
   background-size: cover;
   margin: 0; }
 
 .crazy-bar {
-  background-color: #00FF00;
+  background-color: #0f0;
   background-image: url("../img/mastercat1.png");
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 3px 4px 5px #EB00FF;
+  box-shadow: 3px 4px 5px #eb00ff;
   height: 1%;
   position: fixed;
   top: 0;
-  width: 0%;
-  -webkit-transition: width 0.25s; }
-  .crazy-bar.catInvasionPhaseTwo {
+  -webkit-transition: width 0.25s;
+  width: 0%; }
+  .crazy-bar.cat-invasion-phase-two {
     -webkit-animation: catInvasionPhaseTwo 2s linear forwards;
     animation: catInvasionPhaseTwo 2s linear forwards; }
   .crazy-bar .message {
@@ -182,18 +181,17 @@ body {
     width: 100%; }
 
 .cat {
-  /*background-color: pink;*/
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
   -webkit-filter: drop-shadow(5px 5px 5px #222222);
   filter: drop-shadow(5px 5px 5px #222222);
   height: 100px;
   left: -100px;
   position: absolute;
-  width: 100px;
-  -webkit-transition: top 2s, right 2s, bottom 2s, left 2s; }
+  -webkit-transition: top 2s, right 2s, bottom 2s, left 2s;
+  width: 100px; }
 
-#myCanvas {
+#my-canvas {
   background-color: #efefef;
   height: 100%;
   margin: 0 auto;
