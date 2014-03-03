@@ -13,18 +13,26 @@ module.exports = function(grunt) {
           mangle: false,
           preserveComments: 'all'
         },
-        files: {
-          'build/<%= pkg.name %>.min.js' : ['js/*.js']
-        }
+        files: [{
+          expand: true,
+          cwd: 'js',
+          src: '*.js',
+          dest: 'build/'
+        }]
       },
       prod: {
         options: {
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+          beautify: false,
+          compress: true,
+          mangle: true
         },
-        build: {
-          src: 'js/*.js',
-          dest: 'build/<%= pkg.name %>.min.js'
-        }        
+        files: [{
+          expand: true,
+          cwd: 'js',
+          src: '*.js',
+          dest: 'build/'
+        }]      
       }
 
     },
@@ -63,7 +71,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['js/*.js', 'sass/*.scss'],
-        tasks: ['uglify:dev', 'scsslint', 'sass:dev', 'notify:watch'],
+        tasks: ['uglify:dev', 'notify:js', 'scsslint', 'sass:dev', 'notify:sass'],
         options: {
           spawn: false,
         }
@@ -71,7 +79,13 @@ module.exports = function(grunt) {
     },
     
     notify: {
-      watch: {
+      js: {
+        options: {
+          title: "<%= pkg.name %>",
+          message: "Javascript minified!"
+        }
+      },
+      sass: {
         options: {
           title: "<%= pkg.name %>",
           message: "Javascript minified! \nSass files compiled!"
